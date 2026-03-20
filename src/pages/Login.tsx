@@ -23,8 +23,8 @@ export function Login() {
     setIsLoading(true);
 
     try {
-      const success = await login(formData.email, formData.password);
-      if (success) {
+      return true; // kalau berhasil
+      return false; // kalau gagal
         navigate('/');
       } else {
         setError('Email atau password salah');
